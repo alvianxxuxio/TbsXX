@@ -95,6 +95,7 @@ top: 0;
   grid-template-columns: 1fr; /* Default to 1 column on small screens */
   gap: 20px;
 }
+
 .video-container {
   padding: 20px;
   display: grid;
@@ -102,14 +103,24 @@ top: 0;
   gap: 20px;
 }
 
-/* Three-column grid for larger screens */
+/* Two-column grid for medium-sized screens (e.g., tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .results-container {
+    grid-template-columns: 1fr 1fr; /* Two columns for tablets */
+  }
+  .video-container {
+    grid-template-columns: 1fr 1fr; /* Two columns for tablets */
+  }
+}
+
+/* Three-column grid for larger screens (e.g., desktop, TV) */
 @media (min-width: 1024px) {
   .results-container {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; /* Three columns for larger screens */
   }
-   .video-container {
-    grid-template-columns: 1fr 1fr 1fr;
-  } 
+  .video-container {
+    grid-template-columns: 1fr 1fr 1fr; /* Three columns for larger screens */
+  }
 }
 
 .result-item {
@@ -192,12 +203,14 @@ top: 0;
   font-size: 15px;
   font-weight: bold;
   margin-top: 8px;
+  word-wrap: break-word; /* Memaksa kata panjang untuk berpindah baris */
+  overflow-wrap: break-word; /* Alternatif yang lebih modern */
 }
 
 .result-profile {
   display: flex;
   align-items: center;
-  color: darkorange;
+  color: darkblue;
   margin-top: 19px;
   font-size: 12px;
 }
@@ -322,6 +335,11 @@ top: 0;
 .jks {
   display: flex;
   justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .jks {
+    margin-left: auto; /* Push to the right */
+  }
 }
   /* Close button */
   .close-button {
