@@ -45,7 +45,7 @@ top: 0;
   justify-content: space-between;
   border-bottom: 2px solid black;color:black;
   border-bottom-right-radius: 0px;
-  background-color: rgba(255, 255, 255, 0.6);; /* Opaque background */
+  background-color: rgba(255, 255, 255, 0.6); /* Opaque background */
   padding: 15px 20px;backdrop-filter: blur(20px); /* Creates the blur effect */
   -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
@@ -115,19 +115,21 @@ top: 0;
 .result-item {
   cursor: pointer;
   padding: 12px;
-  background-color: #fff; /* Dark transparent */
+  background-color: #fff;
   margin-bottom: 15px;
-  border-radius: 25px;
-  color: black;box-shadow:0px 0px 5px none;
-  transition: background-color 0.3s ease;
-  width: 100%;border:2px solid black;
+  border-radius: 15px;
+  color: black;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.06);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  border: none;
   box-sizing: border-box;
   text-decoration: none;
 }
 
 .result-item:hover {
-  background-color: #000;
-  color: lightgray
+  background-color: #f9f9f9;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15), 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .thumbnail {
@@ -149,9 +151,14 @@ top: 0;
   position: absolute;
   bottom: 5px;
   right: 5px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 5px;backdrop-filter: blur(60px); /* Creates the blur effect */
+  padding-left: 9px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 9px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #000;
+  font-weight: bold;
+  backdrop-filter: blur(60px); /* Creates the blur effect */
   -webkit-backdrop-filter: blur(10px);
   border-radius: 38px;
   font-size: 12px;
